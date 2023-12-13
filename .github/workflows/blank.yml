@@ -16,7 +16,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - run: docker build -t ghcr.io/lolipopipu/sitnikov_decaber:1.0 .
       - run: docker push ghcr.io/lolipopipu/sitnikov_decaber:1.0
-      - run: ssh -o "StrictHostKeyChecking no" 'lolipopipu-sitnikovdeca-lepq43sirsv#c8eBn4I-LwM1vWTrJ.Q.8Pw2aoOdxCxF@lolipopipu-sitnikovdeca-lepq43sirsv.ssh.ws-eu106.gitpod.io' 'cd /workspace/Sitnikov_decaber/ && docker compose pull && docker compose up -d'
+      - run: ssh -o "StrictHostKeyChecking no" 'lolipopipu-sitnikovdeca-463litbne9a#pY2wxPkVefgpJPCD84h7wsEZEZ0v_9JC@lolipopipu-sitnikovdeca-463litbne9a.ssh.ws-eu106.gitpod.io' 'cd /workspace/Sitnikov_decaber/ && docker compose pull && docker compose up -d'
       - name: send default message
         if: success()
         uses: appleboy/telegram-action@master
