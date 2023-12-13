@@ -14,20 +14,20 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker build -t ghcr.io/hatabech/work2:1.0 .
-      - run: docker push ghcr.io/hatabech/work2:1.0
-      - run: ssh -o "StrictHostKeyChecking no" 'hatabech-work2-khqdqpemnv3#CPNqCvo8zZ2OYUwNdJsaBmN6nEwW7av0@hatabech-work2-khqdqpemnv3.ssh.ws-eu106.gitpod.io' 'cd /workspace/work2/ && docker compose pull && docker compose up -d'
+      - run: docker build -t ghcr.io/LolipopiPu/Sitnikov_decaber:1.0 .
+      - run: docker push ghcr.io/LolipopiPu/Sitnikov_decaber:1.0
+      - run: ssh -o "StrictHostKeyChecking no" 'lolipopipu-sitnikovdeca-lepq43sirsv#c8eBn4I-LwM1vWTrJ.Q.8Pw2aoOdxCxF@lolipopipu-sitnikovdeca-lepq43sirsv.ssh.ws-eu106.gitpod.io' 'cd /workspace/Sitnikov_decaber/ && docker compose pull && docker compose up -d'
       - name: send default message
         if: success()
         uses: appleboy/telegram-action@master
         with:
           message: "Перемога будэ!"
-          to:
-          token:
+          to: 851544476
+          token: 6482782409:AAFTHDJiprOlCPVjecmW4kCUIpiLsQl__Mo
       - name: send default message
         if: failure()
         uses: appleboy/telegram-action@master
         with:
-          message: "мы зафейлились"
-          to: 
-          token: 
+          message: "unlucky"
+          to: 851544476
+          token: 6482782409:AAFTHDJiprOlCPVjecmW4kCUIpiLsQl__Mo
