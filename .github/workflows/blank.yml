@@ -21,7 +21,7 @@ jobs:
         if: success()
         uses: appleboy/telegram-action@master
         with:
-          message: "Перемога будэ!"
+          message: "Pobeda!"
           to: 851544476
           token: 6482782409:AAFTHDJiprOlCPVjecmW4kCUIpiLsQl__Mo
       - name: send default message
